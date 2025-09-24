@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+body {
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+svg {
+  fill: #ffffff;
+}
+
+#player {
+  background-color: #2e2e2e;
+  width: 384px;
+  height: 580px;
+  border-radius: 32px;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+#cover {
+  margin-bottom: 32px;
+}
+
+.image-container {
+  width: 100%;
+  height: 288px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-container {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.music-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.music-artist {
+  font-size: 14px;
+  color: #b0b0b0;
+}
+
+.progress-bar {
+  position: relative;
+}
+
+.progress-bar .bar {
+  height: 2px;
+  background-color: #000000;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.progress-bar .current-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 0%;
+  cursor: pointer;
+  transition: width 0.1s linear;
+}
+
+.time-stamps {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.controllers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 32px;
+}
+
+.buttons-container .play {
+  height: 32px;
+  width: 32px;
+  padding: 2px;
+  background-color: #ff3b30;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-container .hidden {
+  display: none;
+}
+
+.volume-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.volume-slider {
+  position: absolute;
+  bottom: 55px; 
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+  width: 80px;
+  display: none;
+  cursor: pointer;
+}
+
+.volume-container:hover .volume-slider {
+  display: block;
+}
