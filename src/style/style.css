@@ -137,7 +137,7 @@ svg {
 
 .volume-slider {
   position: absolute;
-  bottom: 55px; 
+  bottom: 55px;
   left: 50%;
   transform: translateX(-50%) rotate(-90deg);
   width: 80px;
@@ -147,4 +147,38 @@ svg {
 
 .volume-container:hover .volume-slider {
   display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  #player {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  #cover {
+    margin-bottom: 16px;
+  }
+
+  .music-title {
+    font-size: 18px;
+  }
+
+  .music-artist {
+    font-size: 12px;
+  }
+
+  .controllers {
+    margin-top: 16px;
+    gap: 16px;
+  }
+
+  .buttons-container {
+    gap: 16px;
+  }
+
+  .buttons-container .play {
+    height: 28px;
+    width: 28px;
+  }
 }
